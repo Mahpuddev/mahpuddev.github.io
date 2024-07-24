@@ -744,7 +744,7 @@ def has_openssl():
 
 # Get IPs txt file from Github/vfarid
 def get_github_file(file_name):
-    response = requests.get(f'https://api.github.com/repos/vfarid/cf-ip-scanner-py/contents/{file_name}.txt?ref=main')
+    response = requests.get(f'https://api.github.com/repos/mahpuddev/cf-ip-scanner-py/contents/{file_name}.txt?ref=main')
     result = json.loads(response.text)
     with open(f'./{file_name}.txt', "+a") as f:
             f.write(base64.b64decode(result['content']).decode('utf-8'))
