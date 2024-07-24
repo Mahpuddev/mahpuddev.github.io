@@ -742,7 +742,7 @@ def has_openssl():
     else:
         False
 
-# Get IPs txt file from Github/vfarid
+# Get IPs txt file from Github/mahpuddev
 def get_github_file(file_name):
     response = requests.get(f'https://api.github.com/repos/mahpuddev/cf-ip-scanner-py/contents/{file_name}.txt?ref=main')
     result = json.loads(response.text)
